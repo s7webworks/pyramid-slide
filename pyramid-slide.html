@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="Author" content="Scotty Myers S7Webworks">
+        <style>
+            body {
+              font-family: "Courier New", monospace;
+              text-align: center;
+              background-color: #fafafa;
+              color: #A95587;
+                }
+                    #slideform {
+                         font-size: 20px;
+                         color: black;
+                         background-color: #cccccc;
+                         padding: 10px 0px;
+                        }
+                            header {
+                                 background-color: #A95587;
+                                font-size: 40px;
+                                color: #cccccc;
+                                font-weight: bolder;
+                                padding: 30px;
+                                    }
+                                    #contentarea {
+                                        font-size: 20px;
+                                        margin: 30px 5%;
+                                        background-color: #eeeeee;
+                                        border: 2px solid #A95587;
+                                        border-radius: 6px;
+                                            }
+                                                #pyramid {
+                                                     line-height: 0;
+                                                     font-size: 30px;
+                                                     padding: 15px;
+                                                    }
+                                                    #brickCan {
+                                                margin-left: -800px;
+                                            }
+                                    #colorPicker {
+                                         width: 30%;
+                                         float: left;
+                                         margin-left: 20px;
+                                            }
+                                #showheight {
+                            font-size: 25px;
+                            font-weight: bold;
+                         }
+                    #hexdisplay {
+                 color: #000;
+                 text-align: center;
+                 }
+            #hexinfo {
+         color: #000;
+         }
+     #hexinfo, span {
+    color: #000;
+    }
+
+
+                                                 </style>
+                                               </head>
+                                            <body>
+                                         <header>Pyramid Slide</header>
+                                       <div id="contentarea">
+                                    <div id="slideform"
+                                      <form id="draw-form">
+                                        <div id="colorPicker">
+                                           <label for="red">Red</label>
+                                              <input type="range" name="red"
+                                                onchange="changeColor(this.value)"
+                                                   id="red" min="0" max="255"  step="1" value="170"  >
+                                                     <label for="green">Green</label>
+                                                        <input type="range" name="green" onchange=
+                                                           "changeColor(this.value)"
+                                                               id="green" min="0" max="255" step="1" value="85" >
+                                                                  <label for="blue">Blue</label>
+                                                                     <input type="range" name="blue" id="blue" 
+                                                                        oninput="changeColor(this.value)"
+                                                                          min="0" max="255" step="1" value="36" >
+                                                                            <div id="hexinfo">
+                                                                              <span id='hexdisplay'>#000000</span>
+                                                                            </div></div ><label id="brickCan" >Block Style:
+                                                                          <select id="brick" option="#" 
+                                                                       onchange="symboldropdown(this.value)"  />
+                                                                   <option value="#">#</option>
+                                                                <option value="@">@</option>
+                                                            <option value="X">X</option>
+                                                        <option value="$">$</option>
+                                                     <option value="&beta;">&beta;</option>
+                                                 <option value="&dagger;">&dagger;</option>
+                                            <option value="&yen;">&yen;</option>
+                                        <option value="&copy;">&copy;</option>
+                                    <option value="&trade;">&trade;</option>
+                                 <option value="&curren;">&curren;</option>
+                             </select></label><label>How high?</label> 
+                                <input type="range" name="height"
+                                    id="height" min="1"
+                                       max="20" oninput="heightslider(this.value)"
+                                          value="2" />
+                                             <span id="showheight"></span>
+                                                </form> </div>
+                                                    <div id="pyramid"></div>
+                                                       </div><script src="pyramid-slide.js">
+                                                         </script>
+                                                            </body>
+                                                               </html>
+  
